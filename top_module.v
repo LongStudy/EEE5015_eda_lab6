@@ -2,10 +2,10 @@ module top_module (
     input clk,
     input rst_n,
     input [3:1] s,
-    output fr3,
-    output fr2,
-    output fr1,
-    output dfr
+    output reg fr3,
+    output reg fr2,
+    output reg fr1,
+    output reg dfr
 );
 
 /* 
