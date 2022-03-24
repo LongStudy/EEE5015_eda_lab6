@@ -5,7 +5,8 @@ module top_module (
     output reg fr3,
     output reg fr2,
     output reg fr1,
-    output reg dfr
+    output reg dfr,
+    output reg [1:0] state // State variable
 );
 
 /* 
@@ -21,7 +22,7 @@ parameter // State variable enumeration
     state_lower = 2'b10, // S[3:1]<last_s
     state_undefine = 2'b11;
 
-reg [1:0] state; // State variable
+
 reg [1:0] nextstate;// Next state register
 reg [3:1] last_s; // last_s[3:1] is the last s[3:1] value
 
