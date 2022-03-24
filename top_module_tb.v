@@ -3,10 +3,8 @@ module top_module_tb;
     reg clk, rst_n;
     reg [3:1] s;
     wire fr3, fr2, fr1, dfr;
-    wire [1:0] state; // State variable
-    wire [3:1] last_s;
 
-    top_module u_top_module(clk, rst_n, s, fr3, fr2, fr1, dfr, state, last_s);
+    top_module u_top_module(clk, rst_n, s, fr3, fr2, fr1, dfr);
 
     parameter CLK_PERIOD = 2;
     initial begin
@@ -30,7 +28,7 @@ module top_module_tb;
         #2 
         rst_n = 0;
         s = 0;
-        #4 
+        #2 
         rst_n = 1;
         #6 s = 1;
         #2 s = 3;
@@ -44,7 +42,7 @@ module top_module_tb;
 
 
     initial begin
-        #100 $finish;
+        #40 $finish;
     end
 
 
