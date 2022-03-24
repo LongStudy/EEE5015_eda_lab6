@@ -6,7 +6,7 @@ module top_module_tb;
 
     top_module u_top_module(clk, rst_n, s, fr3, fr2, fr1, dfr);
 
-    parameter CLK_PERIOD = 20;
+    parameter CLK_PERIOD = 2;
     initial begin
         clk = 0;
         forever begin
