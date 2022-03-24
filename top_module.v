@@ -67,7 +67,7 @@ always @(state) begin
             else begin
                 nextstate = state_lower;
             end
-            last_s = s;
+            last_s <= s;
         end
         state_lower: begin
             dfr = 1'b1; //if lower, then dfr=1
