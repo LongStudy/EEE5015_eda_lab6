@@ -22,8 +22,8 @@ parameter // State variable enumeration
     state_start = 2'b11;
 
 
-reg [1:0] state, // State variable
-reg [3:1] last_s // last_s[3:1] is the last s[3:1] value
+reg [1:0] state; // State variable
+reg [3:1] last_s; // last_s[3:1] is the last s[3:1] value
 reg [1:0] nextstate;// Next state register
 
 
