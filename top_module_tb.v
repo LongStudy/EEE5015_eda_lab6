@@ -4,8 +4,9 @@ module top_module_tb;
     reg [3:1] s;
     wire fr3, fr2, fr1, dfr;
     wire [1:0] state; // State variable
+    wire [3:1] last_s;
 
-    top_module u_top_module(clk, rst_n, s, fr3, fr2, fr1, dfr, state);
+    top_module u_top_module(clk, rst_n, s, fr3, fr2, fr1, dfr, state, last_s);
 
     parameter CLK_PERIOD = 2;
     initial begin

@@ -6,7 +6,8 @@ module top_module (
     output reg fr2,
     output reg fr1,
     output reg dfr,
-    output reg [1:0] state // State variable
+    output reg [1:0] state, // State variable
+    output reg [3:1] last_s // last_s[3:1] is the last s[3:1] value
 );
 
 /* 
@@ -24,7 +25,7 @@ parameter // State variable enumeration
 
 
 reg [1:0] nextstate;// Next state register
-reg [3:1] last_s; // last_s[3:1] is the last s[3:1] value
+
 
 always @(posedge clk)begin
 	if(!rst_n) begin
