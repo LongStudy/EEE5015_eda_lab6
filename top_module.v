@@ -30,7 +30,7 @@ reg [1:0] nextstate;// Next state register
 always @(posedge clk)begin
 	if(!rst_n) begin
         last_s <= s;
-		state <= state_equal;
+		state <= state_undefine;
     end
     else
         state <= nextstate;
@@ -86,6 +86,7 @@ always @(posedge clk) begin
             last_s <= s;
         end
         default: begin
+            dfr = 1'b0;
             fr1 = (s[3] == 0) ? 1'b1 : 1'b0; //if s[3]==0, then fr1=1, else fr1=0
             fr2 = (s[3:2]==0) ? 1'b1 : 1'b0; //if s[3:2]=0, fr2=1, else fr2=0
             fr3 = (s[3:1]==0) ? 1'b1 : 1'b0; // if s[3:1]==0, fr3=1, else fr3=0
