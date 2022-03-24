@@ -97,6 +97,7 @@ always @(state) begin
                 nextstate = state_lower;
             end
             last_s = s;
+        end
     endcase
 end
 
