@@ -26,12 +26,12 @@ reg [1:0] nextstate;// Next state register
 reg [3:1] last_s; // last_s[3:1] is the last s[3:1] value
 
 always @(posedge clk)begin
-	if(!rst_n)
+	if(!rst_n) begin
         last_s <= s;
 		state <= state_equal;
+    end
     else
         state <= nextstate;
-
 end
 
 always @(state) begin
