@@ -27,7 +27,7 @@ module top_module_tb;
 
     initial begin
         rst_n = 1;
-        #10 
+        #2 
         rst_n = 0;
         s = 0;
         #4 
