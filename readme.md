@@ -1,7 +1,7 @@
-# lab5_logic_simulation
+# lab6_logic_simulation
 
 ```bash
-git clone https://github.com/LongStudy/EEE5015_eda_lab5.git
+git clone https://github.com/LongStudy/EEE5015_eda_lab6.git
 
 cd ...
 
