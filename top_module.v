@@ -19,6 +19,7 @@ parameter // State variable enumeration
     state_upper = 2'b00, // S[3:1]>last_s
     state_equal = 2'b01, // S[3:1]=last_s
     state_lower = 2'b10, // S[3:1]<last_s
+    state_undefine = 2'b11;
 
 reg [1:0] state; // State variable
 reg [1:0] nextstate;// Next state register
