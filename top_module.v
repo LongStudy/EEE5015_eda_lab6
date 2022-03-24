@@ -51,7 +51,7 @@ always @(state) begin
             else begin
                 nextstate = state_lower;
             end
-            last_s = s;
+            last_s <= s;
         end
         state_equal: begin
             fr1 = (s[3] == 0) ? 1'b1 : 1'b0; //if s[3]==0, then fr1=1, else fr1=0
@@ -82,7 +82,7 @@ always @(state) begin
             else begin
                 nextstate = state_lower;
             end
-            last_s = s;
+            last_s <= s;
         end
         default: begin
             fr1 = (s[3] == 0) ? 1'b1 : 1'b0; //if s[3]==0, then fr1=1, else fr1=0
@@ -97,7 +97,7 @@ always @(state) begin
             else begin
                 nextstate = state_lower;
             end
-            last_s = s;
+            last_s <= s;
         end
     endcase
 end
